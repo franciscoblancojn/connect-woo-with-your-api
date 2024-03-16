@@ -92,13 +92,6 @@ function CWWYA_settings_page() {
 			</ul>
 		</div>
     </div>
-	<script>
-		const templateAddNewApi = `
-				<?php
-					CWWYA_showApi($configDefault["apiDefault"],"newApiID")
-				?>
-		`;
-
-	</script>
     <?php 
+
 }
