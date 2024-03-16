@@ -1,5 +1,5 @@
-=== Connect Woocommerce with your api ===
-Contributors: connect-woocommerce-with-your-api
+=== Connect Woo with your api ===
+Contributors: connect-woo-with-your-api
 Tags: xell
 Requires at least: 4.7
 Tested up to: 6.4
@@ -13,12 +13,12 @@ This is a plugin that allows you to generate routes to connect your api with wor
 == Changelog ==
 
 = 1.0.0 =
-* Added basic connect-woocommerce-with-your-api functionality.
+* Added basic connect-woo-with-your-api functionality.
 
 == Upgrade Notice ==
 
 = 1.0.0 =
-* Added basic connect-woocommerce-with-your-api functionality.
+* Added basic connect-woo-with-your-api functionality.
 
 == Screenshots ==
 1. activeConfig.png
@@ -28,4 +28,4 @@ This is a plugin that allows you to generate routes to connect your api with wor
 5. useUrlForApi.png
 
 == Code ==
-https://github.com/xell-shop/wordpress-plugin
+https://github.com/franciscoblancojn/connect-woo-with-your-api

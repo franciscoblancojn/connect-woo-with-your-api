@@ -1,7 +1,7 @@
 <?php
 /*
-Plugin Name: Connect Woocommerce with your api
-Plugin URI: https://github.com/franciscoblancojn/connect-woocommerce-with-your-api
+Plugin Name: Connect Woo with your api
+Plugin URI: https://github.com/franciscoblancojn/connect-woo-with-your-api
 Description: This is a plugin that allows you to generate routes to connect your api with wordpress giving it the permissions you want, such as creating, editing and deleting products, orders and users. It will also send information on the creation, updating and deletion of orders, users and products to your apis.
 Author: franciscoblancojn
 Version: 1.0.0
@@ -17,7 +17,7 @@ if(!is_plugin_active( 'woocommerce/woocommerce.php' )){
         ?>
         <div class="notice notice-error is-dismissible">
             <p>
-                Connect Woocommerce with your api requiere the plugin  "Woocommerce"
+                Connect Woo with your api requiere the plugin  "Woocommerce"
             </p>
         </div>
         <?php
