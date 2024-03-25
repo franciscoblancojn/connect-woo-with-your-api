@@ -4,9 +4,9 @@ require_once(preg_replace('/wp-content.*$/','',__DIR__).'wp-load.php');
 $data = json_decode(file_get_contents('php://input'), true);
 header('Content-Type: application/json; charset=utf-8');
 if(isset($data)){
-    $_POST = $data;
+    CWWYA_getPOST() = $data;
 }
-$token = $_POST["token"];
+$token = CWWYA_getPOST()["token"];
 
 try {
     CWWYA_validateConfigActive();
