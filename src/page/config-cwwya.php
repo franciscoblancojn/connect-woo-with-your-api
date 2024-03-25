@@ -71,24 +71,24 @@ function CWWYA_settings_page() {
 			</h1>
 			<h3>Orders</h3>
 			<ul>
-				<li><?php echo CWWYA_URL;?>src/routes/orders/view.php</li>
-				<li><?php echo CWWYA_URL;?>src/routes/orders/create.php</li>
-				<li><?php echo CWWYA_URL;?>src/routes/orders/update.php</li>
-				<li><?php echo CWWYA_URL;?>src/routes/orders/delete.php</li>
+				<li><?php echo esc_html(CWWYA_URL);?>src/routes/orders/view.php</li>
+				<li><?php echo esc_html(CWWYA_URL);?>src/routes/orders/create.php</li>
+				<li><?php echo esc_html(CWWYA_URL);?>src/routes/orders/update.php</li>
+				<li><?php echo esc_html(CWWYA_URL);?>src/routes/orders/delete.php</li>
 			</ul>
 			<h3>Products</h3>
 			<ul>
-				<li><?php echo CWWYA_URL;?>src/routes/products/view.php</li>
-				<li><?php echo CWWYA_URL;?>src/routes/products/create.php</li>
-				<li><?php echo CWWYA_URL;?>src/routes/products/update.php</li>
-				<li><?php echo CWWYA_URL;?>src/routes/products/delete.php</li>
+				<li><?php echo esc_html(CWWYA_URL);?>src/routes/products/view.php</li>
+				<li><?php echo esc_html(CWWYA_URL);?>src/routes/products/create.php</li>
+				<li><?php echo esc_html(CWWYA_URL);?>src/routes/products/update.php</li>
+				<li><?php echo esc_html(CWWYA_URL);?>src/routes/products/delete.php</li>
 			</ul>
 			<h3>Users</h3>
 			<ul>
-				<li><?php echo CWWYA_URL;?>src/routes/users/view.php</li>
-				<li><?php echo CWWYA_URL;?>src/routes/users/create.php</li>
-				<li><?php echo CWWYA_URL;?>src/routes/users/update.php</li>
-				<li><?php echo CWWYA_URL;?>src/routes/users/delete.php</li>
+				<li><?php echo esc_html(CWWYA_URL);?>src/routes/users/view.php</li>
+				<li><?php echo esc_html(CWWYA_URL);?>src/routes/users/create.php</li>
+				<li><?php echo esc_html(CWWYA_URL);?>src/routes/users/update.php</li>
+				<li><?php echo esc_html(CWWYA_URL);?>src/routes/users/delete.php</li>
 			</ul>
 		</div>
     </div>

@@ -1,10 +1,10 @@
 <?php
 require_once(preg_replace('/wp-content.*$/','',__DIR__).'wp-load.php');
 
-$data = json_decode(file_get_contents('php://input'), true);
+$data = wp_json_decode(file_get_contents('php://input'), true);
 header('Content-Type: application/json; charset=utf-8');
 if(isset($data)){
-    CWWYA_getPOST() = $data;
+    $_POST = $data;
 }
 $token = CWWYA_getPOST()["token"];
 
@@ -19,12 +19,12 @@ try {
     }
     $result = $run();
 
-    echo json_encode(array(
+    echo wp_json_encode(array(
         "status" => 200,
         "data" => $result,
     ));
 } catch (Exception $e) {
-    echo json_encode(array(
+    echo wp_json_encode(array(
         "status" => 400,
         "data" => $e->getMessage()
     ));

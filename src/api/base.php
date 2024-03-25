@@ -31,7 +31,7 @@ class CWWYA_api
             CURLOPT_FOLLOWLOCATION => true,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "POST",
-            CURLOPT_POSTFIELDS => json_encode($json),
+            CURLOPT_POSTFIELDS => wp_json_encode($json),
             CURLOPT_HTTPHEADER => array(
                 "Content-Type: application/json",
                 'Authorization: '.$this->TOKEN,
@@ -45,7 +45,7 @@ class CWWYA_api
             return $error;
         }
 
-        $response = json_decode($response,true);
+        $response = wp_json_decode($response,true);
 
         return $response;
     }
@@ -75,7 +75,7 @@ class CWWYA_api
             addCWWYA_LOG(array(
                 "api" => $this->NAME,
                 "type" => "error",
-                "error" => json_decode(json_encode($th),true),
+                "error" => wp_json_decode(wp_json_encode($th),true),
                 "dataSend" => $dataSend
             ));
             return array(

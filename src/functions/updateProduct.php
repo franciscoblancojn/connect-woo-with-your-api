@@ -110,7 +110,7 @@ function CWWYA_updateProduct($product,$newProductWoo = null)
         if($img){
             $newProductWoo->set_image_id( $img["attachment_id"] );
         }
-        update_post_meta($product["product_id"],"img",json_encode($img));
+        update_post_meta($product["product_id"],"img",wp_json_encode($img));
     }
 
     if(!empty($product["gallery_image"])){
@@ -120,7 +120,7 @@ function CWWYA_updateProduct($product,$newProductWoo = null)
             $img = CWWYA_upload_image($imgGalery[$i]);  
             $imgGaleryUse[] = $img["attachment_id"];
         }
-        update_post_meta($product["product_id"],"gallery_image".$i,json_encode($imgGaleryUse));
+        update_post_meta($product["product_id"],"gallery_image".$i,wp_json_encode($imgGaleryUse));
         $newProductWoo->set_gallery_image_ids( $imgGaleryUse ); 
     }
 
@@ -149,7 +149,7 @@ function CWWYA_updateProduct($product,$newProductWoo = null)
 
     if(!empty($product["variations"])){
         $variations = get_post_meta($newProductWoo->get_id( ),"variations_aveonline",true);
-        $variations = json_decode($variations,true);
+        $variations = wp_json_decode($variations,true);
         $idsVariations = [];
         foreach ($variations as $key => $variation) {
             if($variation["status"] == 200 ){

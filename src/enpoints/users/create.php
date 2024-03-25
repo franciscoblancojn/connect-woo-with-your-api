@@ -37,8 +37,8 @@ function CWWYA_postUser($user)
         $user_id = wp_create_user($user["username"],$user["password"],$user["email"]);
 
         if(is_wp_error($user_id)){
-            $user_id = json_decode(json_encode($user_id),true);
-            throw new Exception(json_encode($user_id["errors"]));
+            $user_id = wp_json_decode(wp_json_encode($user_id),true);
+            throw new Exception(wp_json_encode($user_id["errors"]));
         }
 
         $userSetMeta = $user;
