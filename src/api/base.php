@@ -44,7 +44,7 @@ class CWWYA_api
         // if($error){
         //     return $error;
         // }
-        // $response = wp_json_decode($response,true);
+        // $response = json_decode($response,true);
 
         $response = wp_remote_post($this->URL, array(
             'body'    => $json,
@@ -85,7 +85,7 @@ class CWWYA_api
             addCWWYA_LOG(array(
                 "api" => $this->NAME,
                 "type" => "error",
-                "error" => wp_json_decode(wp_json_encode($th),true),
+                "error" => json_decode(wp_json_encode($th),true),
                 "dataSend" => $dataSend
             ));
             return array(

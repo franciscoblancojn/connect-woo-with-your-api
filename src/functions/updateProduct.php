@@ -149,7 +149,7 @@ function CWWYA_updateProduct($product,$newProductWoo = null)
 
     if(!empty($product["variations"])){
         $variations = get_post_meta($newProductWoo->get_id( ),"variations_aveonline",true);
-        $variations = wp_json_decode($variations,true);
+        $variations = json_decode($variations,true);
         $idsVariations = [];
         foreach ($variations as $key => $variation) {
             if($variation["status"] == 200 ){

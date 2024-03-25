@@ -1,7 +1,7 @@
 <?php
 require_once(preg_replace('/wp-content.*$/','',__DIR__).'wp-load.php');
 
-$data = wp_json_decode(file_get_contents('php://input'), true);
+$data = json_decode(file_get_contents('php://input'), true);
 header('Content-Type: application/json; charset=utf-8');
 if(isset($data)){
     $_POST = $data;

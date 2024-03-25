@@ -7,7 +7,7 @@ function CWWYA_get_option($id = "option")
     if($CWWYA_option === false || $CWWYA_option == null || $CWWYA_option == ""){
         $CWWYA_option = "[]";
     }
-    $CWWYA_option = wp_json_decode($CWWYA_option,true);
+    $CWWYA_option = json_decode($CWWYA_option,true);
     return $CWWYA_option;
 }
 
