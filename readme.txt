@@ -3,7 +3,7 @@ Contributors: connect-woo-with-your-api
 Tags: xell
 Requires at least: 4.7
 Tested up to: 6.4
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -11,6 +11,9 @@ This is a plugin that allows you to generate routes to connect your api with wor
 
 
 == Changelog ==
+
+= 1.0.1 =
+* Changes functionality.
 
 = 1.0.0 =
 * Added basic connect-woo-with-your-api functionality.
