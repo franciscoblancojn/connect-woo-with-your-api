@@ -1,0 +1,423 @@
+{
+	"info": {
+		"_postman_id": "cc67a4bf-ace3-4483-9cba-d04d21b9a5fe",
+		"name": "Connect Woocommerce with your api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10596157"
+	},
+	"item": [
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "View",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\":\"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/orders/view",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders",
+								"view"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\":\"1\",\n    \"orders\":[\n        {\n            \"user_id\": 26,\n            \"status\": \"wc-processing\",\n            \"billing\": {\n            \"first_name\": \"Wordpress Sell\",\n            \"last_name\": \"Wordpress Sell\",\n            \"address_1\": \"Albania\",\n            \"address_2\": \"asadsad\",\n            \"city\": \"El-Golea\",\n            \"state\": \"Algeria\",\n            \"country\": \"Algeria\",\n            \"email\": \"a222@asd.as\",\n            \"company\": \"\",\n            \"phone\": \"+57-asdasdasd\",\n            \"postcode\": \"\"\n            },\n            \"shipping\": {\n            \"first_name\": \"Wordpress Sell\",\n            \"last_name\": \"Wordpress Sell\",\n            \"address_1\": \"Albania\",\n            \"address_2\": \"asadsad\",\n            \"city\": \"El-Golea\",\n            \"state\": \"Algeria\",\n            \"country\": \"Algeria\",\n            \"company\": \"\",\n            \"postcode\": \"\"\n            },\n            \"payment_method\": \"cod\",\n            \"products\": [{ \"id\": 31, \"quantity\": 1 }],\n            \"shipping_method\": { \"method_id\": \"xell\", \"method_title\": \"xell\", \"total\": 1 }\n        }\n        ]\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/orders/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\":\"1\",\n    \"orders\":[\n        {\n            \"id\":100,\n            \"status\":\"wc-completed\",\n            \"user_id\":26,\n            \"billing\":{\n                \"first_name\": \"sad\",\n                \"last_name\": \"sad\",\n                \"company\": \"asd\",\n                \"address_1\": \"adassa\",\n                \"address_2\": \"sd\",\n                \"city\": \"Medellin\",\n                \"state\": \"CO-ANT\",\n                \"postcode\": \"ASD\",\n                \"country\": \"CO\",\n                \"email\": \"blancofrancisco34@gmail.com\",\n                \"phone\": \"1\"\n            },\n            \"shipping\":{\n                \"first_name\": \"sad\",\n                \"last_name\": \"sad\",\n                \"company\": \"asd\",\n                \"address_1\": \"adassa\",\n                \"address_2\": \"sd\",\n                \"country\": \"CO\",\n                \"state\": \"CO-ANT\",\n                \"city\": \"Medellin\",\n                \"postcode\": \"ASD\"\n            },\n            \"shipping_method\":{\n                \"method_title\":\"method_title\",\n                \"method_id\":\"method_id\",\n                \"total\":111\n            },\n            \"payment_method\":\"cod\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/orders/update",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\":\"1\",\n    \"order_id\" : 100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/orders/delete",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "View",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\":\"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/products/view",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"view"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Simple",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\":\"1\",\n    \"products\":[\n        {\n            \"id\":5511116,\n            \"type\":\"simple\",\n            \"name\":\"test\",\n            \"sku\":\"51111111\",\n            \"description\":\"test\",\n            \"short_description\":\"test\",\n            \"status\":\"publish\",\n            \"visibility\":\"visible\",\n            \"sale_price\":1111,\n            \"regular_price\":11,\n            \"downloadable\":true,\n            \"virtual\":true,\n            \"stock\":true,\n            \"stock_quantity\":11,\n            \"featured\":\"https://www.aerocivil.gov.co/Style%20Library/CEA/img/01.jpg\",\n            \"gallery_image\":[\n                \"https://www.aerocivil.gov.co/Style%20Library/CEA/img/02.jpg\",\n                \"https://www.aerocivil.gov.co/Style%20Library/CEA/img/03.jpg\"\n            ],\n            \"categories\":[\n                \"categories_test111a\",\n                \"categories_test211a1\"\n            ],\n            \"tags\":[\n                \"tag_test111a\",\n                \"tag_test211a1\"\n            ],\n            \"weight\":11,\n            \"width\":11,\n            \"length\":11,\n            \"height\":11,\n            \"custom_meta\":{\n                \"custom_meta1\":1,\n                \"custom_meta2\":2,\n                \"custom_meta3\":3\n            }\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/products/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Variable",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\":\"1\",\n    \"products\":[\n        {\n            \"id\":311,\n            \"type\":\"variable\",\n            \"name\":\"Product variable\",\n            \"sku\":\"variab1le1\",\n            \"description\":\"test\",\n            \"short_description\":\"test\",\n            \"status\":\"publish\",\n            \"visibility\":\"visible\",\n            \"sale_price\":1111,\n            \"regular_price\":11,\n            \"stock\":true,\n            \"stock_quantity\":11,\n            \"featured\":\"https://www.aerocivil.gov.co/Style%20Library/CEA/img/01.jpg\",\n            \"gallery_image\":[\n                \"https://www.aerocivil.gov.co/Style%20Library/CEA/img/02.jpg\",\n                \"https://www.aerocivil.gov.co/Style%20Library/CEA/img/03.jpg\"\n            ],\n            \"categories\":[\n                \"categories_test111a\",\n                \"categories_test211a1\"\n            ],\n            \"tags\":[\n                \"tag_test111a\",\n                \"tag_test211a1\"\n            ],\n            \"weight\":11,\n            \"width\":11,\n            \"length\":11,\n            \"height\":11,\n            \"custom_meta\":{\n                \"custom_meta1\":1,\n                \"custom_meta2\":2,\n                \"custom_meta3\":3\n            },\n            \"attributes\":[\n                {\n                    \"name\":\"size\",\n                    \"options\":[\n                        \"xl\",\n                        \"l\",\n                        \"md\",\n                        \"sm\"\n                    ]\n                },\n                {\n                    \"name\":\"color\",\n                    \"options\":[\n                        \"red\",\n                        \"blue\"\n                    ]\n                }\n            ],\n            \"variations\":[\n                {\n                    \"id\":32,\n                    \"attributes\":[\n                        {\n                            \"name\":\"size\",\n                            \"option\":\"md\"\n                        },\n                        {\n                            \"name\":\"color\",\n                            \"option\":\"blue\"\n                        }\n                    ],\n                    \"name\":\"Variation\",\n                    \"sku\":\"Vatiation-2\",\n                    \"description\":\"test\",\n                    \"short_description\":\"test\",\n                    \"status\":\"publish\",\n                    \"visibility\":\"visible\",\n                    \"sale_price\":1111,\n                    \"regular_price\":11,\n                    \"stock\":true,\n                    \"stock_quantity\":11,\n                    \"featured\":\"https://www.aerocivil.gov.co/Style%20Library/CEA/img/01.jpg\",\n                    \"gallery_image\":[\n                        \"https://www.aerocivil.gov.co/Style%20Library/CEA/img/02.jpg\",\n                        \"https://www.aerocivil.gov.co/Style%20Library/CEA/img/03.jpg\"\n                    ],\n                    \"categories\":[\n                        \"categories_test111a\",\n                        \"categories_test211a1\"\n                    ],\n                    \"tags\":[\n                        \"tag_test111a\",\n                        \"tag_test211a1\"\n                    ],\n                    \"weight\":11,\n                    \"width\":11,\n                    \"length\":11,\n                    \"height\":11\n                },\n\n                {\n                    \"id\":33,\n                    \"attributes\":[\n                        {\n                            \"name\":\"size\",\n                            \"option\":\"xl\"\n                        },\n                        {\n                            \"name\":\"color\",\n                            \"option\":\"red\"\n                        }\n                    ],\n                    \"name\":\"Variation\",\n                    \"sku\":\"Vatiation-1\",\n                    \"description\":\"test\",\n                    \"short_description\":\"test\",\n                    \"status\":\"publish\",\n                    \"visibility\":\"visible\",\n                    \"sale_price\":1111,\n                    \"regular_price\":11,\n                    \"stock\":true,\n                    \"stock_quantity\":11,\n                    \"featured\":\"https://www.aerocivil.gov.co/Style%20Library/CEA/img/01.jpg\",\n                    \"gallery_image\":[\n                        \"https://www.aerocivil.gov.co/Style%20Library/CEA/img/02.jpg\",\n                        \"https://www.aerocivil.gov.co/Style%20Library/CEA/img/03.jpg\"\n                    ],\n                    \"categories\":[\n                        \"categories_test111a\",\n                        \"categories_test211a1\"\n                    ],\n                    \"tags\":[\n                        \"tag_test111a\",\n                        \"tag_test211a1\"\n                    ],\n                    \"weight\":11,\n                    \"width\":11,\n                    \"length\":11,\n                    \"height\":11\n                }\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/products/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\":\"1\",\n    \"products\":[\n        {\n            \"id\":105,\n            \"type\":\"variable\",\n            \"name\":\"Product variable change\",\n            \"sku\":\"variable1\",\n            \"description\":\"test\",\n            \"short_description\":\"test\",\n            \"status\":\"publish\",\n            \"visibility\":\"visible\",\n            \"sale_price\":1111,\n            \"regular_price\":11,\n            \"stock\":true,\n            \"stock_quantity\":11,\n            \"featured\":\"http://localhost/wordpress/wp-content/uploads/2022/02/17024.jpg\",\n            \"gallery_image\":[\n                \"http://localhost/wordpress/wp-content/uploads/2022/02/17024.jpg\",\n                \"http://localhost/wordpress/wp-content/uploads/2022/02/17060.jpg\"\n            ],\n            \"categories\":[\n                \"categories_test111a\",\n                \"categories_test211a1\"\n            ],\n            \"tags\":[\n                \"tag_test111a\",\n                \"tag_test211a1\"\n            ],\n            \"weight\":11,\n            \"width\":11,\n            \"length\":11,\n            \"height\":11,\n            \"custom_meta\":{\n                \"custom_meta1\":1,\n                \"custom_meta2\":2,\n                \"custom_meta3\":3\n            },\n            \"attributes\":[\n                {\n                    \"name\":\"size2\",\n                    \"options\":[\n                        \"xl\",\n                        \"l\",\n                        \"md\",\n                        \"sm\"\n                    ]\n                },\n                {\n                    \"name\":\"color2\",\n                    \"options\":[\n                        \"red\",\n                        \"blue\"\n                    ]\n                }\n            ],\n            \"variations\":[\n                {\n                    \"id\":32,\n                    \"attributes\":[\n                        {\n                            \"name\":\"size2\",\n                            \"option\":\"md\"\n                        },\n                        {\n                            \"name\":\"color2\",\n                            \"option\":\"blue\"\n                        }\n                    ],\n                    \"name\":\"Variationchange\",\n                    \"sku\":\"Vatiation-2ccccc\",\n                    \"description\":\"test\",\n                    \"short_description\":\"test\",\n                    \"status\":\"publish\",\n                    \"visibility\":\"visible\",\n                    \"sale_price\":1111,\n                    \"regular_price\":11,\n                    \"stock\":true,\n                    \"stock_quantity\":11,\n                    \"featured\":\"http://localhost/wordpress/wp-content/uploads/2022/02/17060.jpg\",\n                    \"gallery_image\":[\n                        \"http://localhost/wordpress/wp-content/uploads/2022/02/17060.jpg\",\n                        \"http://localhost/wordpress/wp-content/uploads/2022/02/17060.jpg\"\n                    ],\n                    \"categories\":[\n                        \"categories_test111a\",\n                        \"categories_test211a1\"\n                    ],\n                    \"tags\":[\n                        \"tag_test111a\",\n                        \"tag_test211a1\"\n                    ],\n                    \"weight\":11,\n                    \"width\":11,\n                    \"length\":11,\n                    \"height\":11\n                },\n                {\n                    \"id\":33,\n                    \"attributes\":[\n                        {\n                            \"name\":\"size2\",\n                            \"option\":\"xl\"\n                        },\n                        {\n                            \"name\":\"color2\",\n                            \"option\":\"red\"\n                        }\n                    ],\n                    \"name\":\"Variationchange\",\n                    \"sku\":\"Vatiation-12ccccc\",\n                    \"description\":\"test\",\n                    \"short_description\":\"test\",\n                    \"status\":\"publish\",\n                    \"visibility\":\"visible\",\n                    \"sale_price\":1111,\n                    \"regular_price\":11,\n                    \"stock\":true,\n                    \"stock_quantity\":11,\n                    \"featured\":\"http://localhost/wordpress/wp-content/uploads/2022/02/17060.jpg\",\n                    \"gallery_image\":[\n                        \"http://localhost/wordpress/wp-content/uploads/2022/02/17060.jpg\",\n                        \"http://localhost/wordpress/wp-content/uploads/2022/02/17060.jpg\"\n                    ],\n                    \"categories\":[\n                        \"categories_test111a\",\n                        \"categories_test211a1\"\n                    ],\n                    \"tags\":[\n                        \"tag_test111a\",\n                        \"tag_test211a1\"\n                    ],\n                    \"weight\":11,\n                    \"width\":11,\n                    \"length\":11,\n                    \"height\":11\n                },\n                {\n                    \"id\":34,\n                    \"attributes\":[\n                        {\n                            \"name\":\"size2\",\n                            \"option\":\"l\"\n                        },\n                        { \n                            \"name\":\"color2\",\n                            \"option\":\"red\"\n                        }\n                    ],\n                    \"name\":\"Variationchange\",\n                    \"sku\":\"Vatiation-12ccccc34\",\n                    \"description\":\"test\",\n                    \"short_description\":\"test\",\n                    \"status\":\"publish\",\n                    \"visibility\":\"visible\",\n                    \"sale_price\":1111,\n                    \"regular_price\":11,\n                    \"stock\":true,\n                    \"stock_quantity\":11,\n                    \"featured\":\"http://localhost/wordpress/wp-content/uploads/2022/02/17060.jpg\",\n                    \"gallery_image\":[\n                        \"http://localhost/wordpress/wp-content/uploads/2022/02/17060.jpg\",\n                        \"http://localhost/wordpress/wp-content/uploads/2022/02/17060.jpg\"\n                    ],\n                    \"categories\":[\n                        \"categories_test111a\",\n                        \"categories_test211a1\"\n                    ],\n                    \"tags\":[\n                        \"tag_test111a\",\n                        \"tag_test211a1\"\n                    ],\n                    \"weight\":11,\n                    \"width\":11,\n                    \"length\":11,\n                    \"height\":11\n                }\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/products/update",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\":\"1\",\n    \"product_id\":105\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/products/delete",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "View",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\":\"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users/view",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"view"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\":\"1\",\n    \"users\":[\n        {\n            \"username\":\"aaaaa322a\",\n            \"password\":\"te32st\",\n            \"email\":\"a124aaaa@gmail.com\",\n            \"first_name\":\"first_name\",\n            \"last_name\":\"last_name\",\n            \"url\":\"http://localhost/wordpress/wp-admi\",\n            \"description\":\"description\",\n            \"billing_first_name\":\"billing_first_name\",\n            \"billing_last_name\":\"billing_last_name\",\n            \"billing_company\":\"billing_company\",\n            \"billing_address_1\":\"billing_address_1\",\n            \"billing_address_2\":\"billing_address_2\",\n            \"billing_postcode\":\"billing_postcode\",\n            \"billing_country\": \"AF\",\n            \"billing_state\":\"billing_state\",\n            \"billing_city\":\"billing_city\",\n            \"billing_phone\":\"billing_phone\",\n            \"shipping_first_name\":\"shipping_first_name\",\n            \"shipping_last_name\":\"shipping_last_name\",\n            \"shipping_company\":\"shipping_company\",\n            \"shipping_address_1\":\"shipping_address_1\",\n            \"shipping_address_2\":\"shipping_address_2\",\n            \"shipping_postcode\":\"shipping_postcode\",\n            \"shipping_country\":\"AF\",\n            \"shipping_state\":\"shipping_state\",\n            \"shipping_city\":\"shipping_city\",\n            \"shipping_phone\":\"shipping_phone\"\n        },\n        {\n            \"username\":\"aaaaaaaaarrr\",\n            \"password\":\"test\",\n            \"email\":\"a1aaatt2a@gmail.com\",\n            \"first_name\":\"first_name\",\n            \"last_name\":\"last_name\",\n            \"url\":\"http://localhost/wordpress/wp-admi\",\n            \"description\":\"description\",\n            \"billing_first_name\":\"billing_first_name\",\n            \"billing_last_name\":\"billing_last_name\",\n            \"billing_company\":\"billing_company\",\n            \"billing_address_1\":\"billing_address_1\",\n            \"billing_address_2\":\"billing_address_2\",\n            \"billing_postcode\":\"billing_postcode\",\n            \"billing_country\": \"AF\",\n            \"billing_state\":\"billing_state\",\n            \"billing_city\":\"billing_city\",\n            \"billing_phone\":\"billing_phone\",\n            \"shipping_first_name\":\"shipping_first_name\",\n            \"shipping_last_name\":\"shipping_last_name\",\n            \"shipping_company\":\"shipping_company\",\n            \"shipping_address_1\":\"shipping_address_1\",\n            \"shipping_address_2\":\"shipping_address_2\",\n            \"shipping_postcode\":\"shipping_postcode\",\n            \"shipping_country\":\"AF\",\n            \"shipping_state\":\"shipping_state\",\n            \"shipping_city\":\"shipping_city\",\n            \"shipping_phone\":\"shipping_phone\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\":\"1\",\n    \"users\":[\n        {\n            \"id\":28,\n            \"username\":\"a2aaa\",\n            \"password\":\"1234\",\n            \"email\":\"a1111a@gmail.com\",\n            \"first_name\":\"first_name2\",\n            \"last_name\":\"last_name\",\n            \"url\":\"http://localhost/wordpress/wp-admi\",\n            \"description\":\"description\",\n            \"billing_first_name\":\"billing_first_name\",\n            \"billing_last_name\":\"billing_last_name\",\n            \"billing_company\":\"billing_company\",\n            \"billing_address_1\":\"billing_address_1\",\n            \"billing_address_2\":\"billing_address_2\",\n            \"billing_postcode\":\"billing_postcode\",\n            \"billing_country\": \"AF\",\n            \"billing_state\":\"billing_state\",\n            \"billing_city\":\"billing_city\",\n            \"billing_phone\":\"billing_phone\",\n            \"shipping_first_name\":\"shipping_first_name\",\n            \"shipping_last_name\":\"shipping_last_name\",\n            \"shipping_company\":\"shipping_company\",\n            \"shipping_address_1\":\"shipping_address_1\",\n            \"shipping_address_2\":\"shipping_address_2\",\n            \"shipping_postcode\":\"shipping_postcode\",\n            \"shipping_country\":\"AF\",\n            \"shipping_state\":\"shipping_state\",\n            \"shipping_city\":\"shipping_city\",\n            \"shipping_phone\":\"shipping_phone\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users/update",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\":\"1\",\n    \"user_id\":28\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users/delete",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "1234",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost/wordpress/wp-content",
+			"type": "string"
+		}
+	]
+}
