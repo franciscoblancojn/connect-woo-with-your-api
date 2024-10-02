@@ -6,7 +6,7 @@ Description: This is a plugin that allows you to generate routes to connect your
 Author: franciscoblancojn
 Version: 1.0.3
 Author URI: https://franciscoblanco.vercel.app/
-License: ISC
+License: GPLv2
  */
 
  if ( ! defined( 'ABSPATH' ) ) exit;

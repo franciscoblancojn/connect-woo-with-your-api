@@ -5,7 +5,7 @@ Requires at least: 4.7
 Tested up to: 6
 Stable tag: 1.0.3
 Requires PHP: 7.0
-License: GPLv2 or later
+License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 This is a plugin that allows you to generate routes to connect your api with wordpress giving it the permissions you want, such as creating, editing and deleting products, orders and users. It will also send information on the creation, updating and deletion of orders, users and products to your apis.
 
