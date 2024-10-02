@@ -166,7 +166,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"token\":\"1\",\n    \"products\":[\n        {\n            \"id\":5511116,\n            \"type\":\"simple\",\n            \"name\":\"test\",\n            \"sku\":\"51111111\",\n            \"description\":\"test\",\n            \"short_description\":\"test\",\n            \"status\":\"publish\",\n            \"visibility\":\"visible\",\n            \"sale_price\":1111,\n            \"regular_price\":11,\n            \"downloadable\":true,\n            \"virtual\":true,\n            \"stock\":true,\n            \"stock_quantity\":11,\n            \"featured\":\"https://www.aerocivil.gov.co/Style%20Library/CEA/img/01.jpg\",\n            \"gallery_image\":[\n                \"https://www.aerocivil.gov.co/Style%20Library/CEA/img/02.jpg\",\n                \"https://www.aerocivil.gov.co/Style%20Library/CEA/img/03.jpg\"\n            ],\n            \"categories\":[\n                \"categories_test111a\",\n                \"categories_test211a1\"\n            ],\n            \"tags\":[\n                \"tag_test111a\",\n                \"tag_test211a1\"\n            ],\n            \"weight\":11,\n            \"width\":11,\n            \"length\":11,\n            \"height\":11,\n            \"custom_meta\":{\n                \"custom_meta1\":1,\n                \"custom_meta2\":2,\n                \"custom_meta3\":3\n            }\n        }\n    ]\n}",
+							"raw": "{\n    \"token\":\"1\",\n    \"products\":[\n        {\n            \"id\":55211132126,\n            \"type\":\"simple\",\n            \"name\":\"test\",\n            \"sku\":\"5111212111\",\n            \"description\":\"test\",\n            \"short_description\":\"test\",\n            \"status\":\"publish\",\n            \"visibility\":\"visible\",\n            \"sale_price\":1111,\n            \"regular_price\":11,\n            \"downloadable\":true,\n            \"virtual\":true,\n            \"stock\":true,\n            \"stock_quantity\":11,\n            \"featured\":\"https://www.aerocivil.gov.co/Style%20Library/CEA/img/01.jpg\",\n            \"gallery_image\":[\n                \"https://www.aerocivil.gov.co/Style%20Library/CEA/img/02.jpg\",\n                \"https://www.aerocivil.gov.co/Style%20Library/CEA/img/03.jpg\"\n            ],\n            \"categories\":[\n                \"categories_test111a\",\n                \"categories_test211a1\"\n            ],\n            \"tags\":[\n                \"tag_test111a\",\n                \"tag_test211a1\"\n            ],\n            \"weight\":11,\n            \"width\":11,\n            \"length\":11,\n            \"height\":11,\n            \"custom_meta\":{\n                \"custom_meta1\":1,\n                \"custom_meta2\":2,\n                \"custom_meta3\":3\n            }\n        }\n    ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -279,7 +279,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"token\":\"1\"\n}",
+							"raw": "{\n    \"token\":\"MC42cWFneW51ejV3YTAuamRiMmhsNTcxb20wLm42aTZuZDVlYzUwLjZobnRxcWVzbzk5\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
