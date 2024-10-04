@@ -4,7 +4,7 @@ Plugin Name: Connect Woo with your api
 Plugin URI: https://github.com/franciscoblancojn/connect-woo-with-your-api
 Description: This is a plugin that allows you to generate routes to connect your api with wordpress giving it the permissions you want, such as creating, editing and deleting products, orders and users. It will also send information on the creation, updating and deletion of orders, users and products to your apis.
 Author: franciscoblancojn
-Version: 1.0.4
+Version: 1.0.5
 Author URI: https://franciscoblanco.vercel.app/
 License: GPLv2 or later
  */
