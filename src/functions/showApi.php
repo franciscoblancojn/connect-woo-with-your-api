@@ -3,7 +3,14 @@ if (! defined('ABSPATH')) exit;
 function CWWYA_showApi($api, $i = 0)
 {
 ?>
-    <div class="api">
+    <div class="api" <?php echo $api["hidden"] == "on" ? "style='display:none;'" : "" ?>>
+        <input
+            type="checkbox"
+            style="position: fixed;scale:0;"
+            <?php echo $api["hidden"] == "on" ? "checked" : "" ?>
+            name="api[<?php echo esc_html($i) ?>][hidden]"
+            id="api[<?php echo esc_html($i) ?>][hidden]" 
+            defaultValue="<?php echo esc_html($api["hidden"]) ?>"/>
         <label class="input-api">
             <h3 class="active-api">Active</h3>
             <input

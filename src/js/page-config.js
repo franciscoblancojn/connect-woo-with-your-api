@@ -1,6 +1,18 @@
 
 const CWWYA_templateAddNewApi = `
 <div class="api  ">
+<input
+    type="hidden"
+    name="api[newApiID][hidden]"
+    id="api[newApiID][hidden]" />
+<label class="input-api">
+    <h3 class="active-api">Active</h3>
+    <input
+        type="checkbox"
+        checked
+        name="api[newApiID][active]"
+        id="api[newApiID][active]" />
+</label>
 <label class="input-api">
 <h3 class="name-api">Name</h3>
 <input 
