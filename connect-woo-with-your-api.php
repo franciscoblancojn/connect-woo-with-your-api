@@ -59,7 +59,7 @@ function CWWYA_required_validations()
             "error" => ('Connect Woo with your api requiere "Curl"')
         ],
     ];
-
+    $sw = true;
     for ($i = 0; $i < count($requiredValidations); $i++) {
         $vaidation = $requiredValidations[$i]['validation'];
         $error = $requiredValidations[$i]['error'] ?? '';
@@ -67,10 +67,10 @@ function CWWYA_required_validations()
             add_action('admin_notices', function () use ($error) {
                 CWWYA_log_dependencia($error);
             });
-            return false;
+            $sw = false;
         }
     }
-    return true;
+    return $sw;
 }
 if (CWWYA_required_validations()) {
     require_once CWWYA_DIR . 'update.php';
