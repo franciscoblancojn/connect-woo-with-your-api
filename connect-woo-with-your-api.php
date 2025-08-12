@@ -48,7 +48,7 @@ function CWWYA_required_validations()
     $requiredValidations = [
         [
             "validation" => is_plugin_active('woocommerce/woocommerce.php'),
-            "error" => ('Aveonline Connect requiere the plugin "Woocommerce"')
+            "error" => ('Connect Woo with your api requiere the plugin "Woocommerce"')
         ],
         [
             "validation" => (is_callable('curl_init') &&
@@ -56,7 +56,7 @@ function CWWYA_required_validations()
                 function_exists('curl_close') &&
                 function_exists('curl_exec') &&
                 function_exists('curl_setopt_array')),
-            "error" => ('Aveonline Connect requiere "Curl"')
+            "error" => ('Connect Woo with your api requiere "Curl"')
         ],
     ];
 
