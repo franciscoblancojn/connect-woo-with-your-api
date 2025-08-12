@@ -10,6 +10,9 @@ function CWWYA_router_base($permission,$run,$data) {
         if($api == null){
             throw new Exception('Token invalid');
         }
+        if($api['active'] !== 'on'){
+            throw new Exception('Api Disabled');
+        }
         if(!CWWYA_validatePermission($api,$permission)){
             throw new Exception('Permission denied');
         }
