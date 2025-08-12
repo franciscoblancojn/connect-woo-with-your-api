@@ -16,7 +16,7 @@ class CWWYA_api
         $this->TOKEN = $settings["token"];
     }
 
-    private function request($json)
+    private function request(Array $json)
     {
 
         // $curl = curl_init();
@@ -47,7 +47,7 @@ class CWWYA_api
         // $response = json_decode($response,true);
 
         $response = wp_remote_post($this->URL, array(
-            'body'    => $json,
+            'body'    => json_encode($json),
             'headers' => array(
                 "Content-Type" => "application/json",
                 'Authorization' => $this->TOKEN,
