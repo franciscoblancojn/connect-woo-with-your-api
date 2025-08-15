@@ -9,8 +9,8 @@ function CWWYA_showApi($api, $i = 0)
             style="position: fixed;scale:0;"
             <?php echo $api["hidden"] == "on" ? "checked" : "" ?>
             name="api[<?php echo esc_html($i) ?>][hidden]"
-            id="api[<?php echo esc_html($i) ?>][hidden]" 
-            defaultValue="<?php echo esc_html($api["hidden"]) ?>"/>
+            id="api[<?php echo esc_html($i) ?>][hidden]"
+            defaultValue="<?php echo esc_html($api["hidden"]) ?>" />
         <label class="input-api">
             <h3 class="active-api">Active</h3>
             <input
@@ -28,15 +28,26 @@ function CWWYA_showApi($api, $i = 0)
                 id="api[<?php echo esc_html($i) ?>][name]"
                 value="<?php echo esc_html($api["name"]) ?>">
         </label>
-        <label class="input-api">
-            <h3 class="url-api">Url</h3>
-            <input
-                type="text"
-                class="input-url-api"
-                name="api[<?php echo esc_html($i) ?>][url]"
-                id="api[<?php echo esc_html($i) ?>][url]"
-                value="<?php echo esc_html($api["url"]) ?>">
-        </label>
+        <div>
+            <label class="input-api">
+                <h3 class="url-api">Url</h3>
+                <input
+                    type="text"
+                    class="input-url-api"
+                    name="api[<?php echo esc_html($i) ?>][url]"
+                    id="api[<?php echo esc_html($i) ?>][url]"
+                    value="<?php echo esc_html($api["url"]) ?>">
+            </label>
+            <label class="input-api">
+                <h3 class="function-api">Function</h3>
+                <input
+                    type="text"
+                    class="input-function-api"
+                    name="api[<?php echo esc_html($i) ?>][function]"
+                    id="api[<?php echo esc_html($i) ?>][function]"
+                    value="<?php echo esc_html($api["function"]) ?>">
+            </label>
+        </div>
         <label class="input-api">
             <h3 class="token-api">Token</h3>
             <input

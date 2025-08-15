@@ -23,6 +23,7 @@ const CWWYA_templateAddNewApi = `
     value=""
 >
 </label>
+<div>
 <label class="input-api">
 <h3 class="url-api">Url</h3>
 <input 
@@ -32,7 +33,17 @@ const CWWYA_templateAddNewApi = `
     id="api[newApiID][url]"
     value=""
 >
+</label><label class="input-api">
+<h3 class="function-api">Function</h3>
+<input 
+    type="text" 
+    class="input-function-api" 
+    name="api[newApiID][function]" 
+    id="api[newApiID][function]"
+    value=""
+>
 </label>
+</div>
 <label class="input-api">
 <h3 class="token-api">Token</h3>
 <input 
